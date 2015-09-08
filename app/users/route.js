@@ -5,5 +5,10 @@ export default Ember.Route.extend({
 		//params.user_id = 12;
 		//return this.store.find('user',params.user_id);
 		return this.store.find('user');
+	},
+	actions:{
+		toUser:function(id){
+			this.transitionTo('touser',id);
+		}
 	}
 });

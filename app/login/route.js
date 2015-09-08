@@ -11,10 +11,14 @@ actions: {
         data: JSON.stringify({email: "ankur47@gmail.com", password: "hello123"}),
         contentType: "application/json"
       }).then((data) => {
-      	console.log(data);
-        console.log('iam in login');
+      	//console.log(data);
+        if(data.user_data)
+            console.log('iam logged in');
+        else
+            console.log('wrong input');
         this.transitionTo('users');
-        console.log("Ankur's app");
+        //console.log("Ankur's app");
+        //console.log(data.user_data);
         //this.transitionTo('users',data.user_id);
       
     });

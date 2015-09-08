@@ -1,6 +1,6 @@
 
 {{#each model as |user|}}
-	{{user.email}} <br>
+	{{user.email}} {{user.id}} <button {{action 'toUser' user.id }}>link</button><br>
 {{/each}}
 
 <!--
