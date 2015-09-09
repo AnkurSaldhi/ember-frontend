@@ -22,8 +22,9 @@ actions: {
             this.transitionTo('users');
           }
         else
+          {
             console.log('wrong input');
-  
+          }
         //console.log("Ankur's app");
         //console.log(data.user_data);
         //this.transitionTo('users',data.user_id);

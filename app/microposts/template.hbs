@@ -1,11 +1,5 @@
-{{#each model.microposts as |user|}}
-	{{user.content}}
+{{#each model.microposts as |micropost|}}
+	{{micropost.content}} {{micropost.id}}
 {{/each}}
-
-
-{{#each model.comments as |comment|}}
-	{{comment.body}}
-{{/each}}
-
 
 {{outlet}}
