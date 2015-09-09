@@ -1,0 +1,11 @@
+{{#each model.microposts as |user|}}
+	{{user.content}}
+{{/each}}
+
+
+{{#each model.comments as |comment|}}
+	{{comment.body}}
+{{/each}}
+
+
+{{outlet}}

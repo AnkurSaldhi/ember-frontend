@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('users');
 
   this.route('touser',{path:'users/:user_id'});
+  this.route('microposts',{path:'users/:user_id/microposts'});
 });
 
 export default Router;
