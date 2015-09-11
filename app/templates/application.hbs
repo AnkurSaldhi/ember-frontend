@@ -1,5 +1,14 @@
 <h2 id="title">Welcome to Ember</h2>
 
+{{#if user}}
+	hello!!....User-{{user.email}}  {{user.id}}
+	<button  class="btn btn-default btn-lg" {{action 'logout'}}>Logout</button><br>
+{{/if}}
+
+{{#unless user}}
 	{{#link-to 'login'}}Login{{/link-to}}
+	{{#link-to 'signup'}}Signup{{/link-to}}
+{{/unless}}
+
 
 {{outlet}}

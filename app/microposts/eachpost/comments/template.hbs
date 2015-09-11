@@ -1,0 +1,18 @@
+{{#each model as |comment|}}
+	{{comment.body}} {{comment.id}} <br>
+{{/each}}
+<br><br>
+Submit the comment for this Micropost :-
+<div class="row">
+        <div class="col-md-3 ">
+                <form {{action 'createcomment' on='submit'}}>
+                        <div class="form-group">
+                                <label for="body">Body</label>
+                                {{textarea type="text" value=data class="form-control" placeholder="Enter comment"}}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>
+</div>
+
+{{outlet}}

@@ -1,5 +1,20 @@
-{{#each model.microposts as |micropost|}}
-	{{micropost.content}} {{micropost.id}}
+{{#each model as |micropost|}}
+   {{micropost.content}} {{micropost.id}} <button {{action 'showthispost' micropost.id}}>Show Post</button><br>
 {{/each}}
+<br>
+
+Submit the content of a Micropost :-
+<div class="row">
+        <div class="col-md-3 ">
+                <form {{action 'createPost' on='submit'}}>
+                        <div class="form-group">
+                                <label for="content">Content</label>
+                                {{textarea type="text" value=data class="form-control" placeholder="Enter content"}}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>
+</div>
+
 
 {{outlet}}

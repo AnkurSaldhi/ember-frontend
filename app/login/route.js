@@ -4,7 +4,7 @@ import $ from 'jquery';
 export default Ember.Route.extend({
 
 actions: {
-    login: function() {      
+    login: function() {   
       $.ajax({
         type: "POST",
         url: "http://localhost:4200/users/signin",
@@ -16,7 +16,8 @@ actions: {
           {
             //console.log(data.user_data.created_at)
             //data.user_data.id
-            this.store.createRecord
+
+            this.controllerFor('application').set('user',data.user_data);
             console.log('iam logged in');
             //this.session.set('user',data.user_data)
             this.transitionTo('users');
@@ -25,7 +26,6 @@ actions: {
           {
             console.log('wrong input');
           }
-        //console.log("Ankur's app");
         //console.log(data.user_data);
         //this.transitionTo('users',data.user_id);
       

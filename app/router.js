@@ -9,9 +9,15 @@ Router.map(function() {
   this.route('login');
   //this.route('users',{path:'users/:user_id'});
   this.route('users');
-
   this.route('touser',{path:'users/:user_id'});
-  this.route('microposts',{path:'users/:user_id/microposts'});
+  this.route('microposts',{path:'users/:user_id/microposts'}, function() {
+          this.route('eachpost', { path: '/:micropost_id'}, function() {
+                this.route('comments', { path: '/comments'}, function() {})
+          });
+          //this.route('comments', { path: '/:micropost_id/comments'}, function() {})
+  });
+  this.route('register');
+  this.route('signup');
 });
 
 export default Router;
