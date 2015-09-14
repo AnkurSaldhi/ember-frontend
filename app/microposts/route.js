@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model: function(params){
+                //this calls microposts index method with user_id in params
 		return this.store.find('micropost', params);
 	},
 

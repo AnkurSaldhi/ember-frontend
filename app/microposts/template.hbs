@@ -1,7 +1,8 @@
 {{#each model as |micropost|}}
-   {{micropost.content}} {{micropost.id}} <button {{action 'showthispost' micropost.id}}>Show Post</button><br>
-{{/each}}
-<br>
+   {{micropost.content}} {{micropost.id}} &nbsp;{{micropost.likescount}} <button {{action 'showthispost' micropost.id}}>Show Post</button><br>
+ {{/each}}
+
+
 
 Submit the content of a Micropost :-
 <div class="row">
